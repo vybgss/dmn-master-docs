@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>DMN Master — DMN decision modeling for iPhone, iPad and Mac</title>
+  <meta name="description"
+    content="DMN Master is a native DMN editor for iPhone, iPad and Mac. Draw decision requirements diagrams, edit decision tables like a spreadsheet and check the model as you go." />
+  <meta name="theme-color" content="#b4471a" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1814" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DMN Master — DMN on iPhone, iPad and Mac" />
+  <meta property="og:description"
+    content="A native DMN editor. Draw decision requirements diagrams, edit decision tables and check the model anywhere." />
+  <meta property="og:image" content="https://vybgss.github.io/dmn-master-docs/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+
+<body>
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="marketing.html"><img src="assets/icon.png" alt="" /><span>DMN Master</span></a>
+      <nav class="nav" aria-label="Site">
+        <a href="marketing.html" aria-current="page">Overview</a>
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- A requirements graph as the app draws it: input data and a knowledge model feeding a decision. -->
+        <svg class="flow" viewBox="0 0 228 64" role="img" aria-label="Input data and a business knowledge model feeding a decision">
+          <rect x="1" y="1" width="226" height="62" rx="31" style="fill: var(--card); stroke: var(--hairline)" />
+          <rect x="15" y="20" width="50" height="24" rx="12" class="shape-fill shape-ink" stroke-width="2.5" />
+          <line x1="67" y1="32" x2="81" y2="32" style="stroke: var(--muted)" stroke-width="2" />
+          <polygon points="81,28 87,32 81,36" style="fill: var(--muted)" />
+          <rect x="90" y="15" width="48" height="34" rx="1.5" class="shape-fill shape-accent" stroke-width="2.5" />
+          <path d="M96 21 H107 V28 H96 Z M96 24.5 H107 M100 21 V28" fill="none" class="shape-accent" stroke-width="1.4" />
+          <line x1="143" y1="32" x2="161" y2="32" style="stroke: var(--muted)" stroke-width="2" stroke-dasharray="4 3" />
+          <path d="M148 28 L142 32 L148 36" fill="none" style="stroke: var(--muted)" stroke-width="2"
+            stroke-linejoin="round" stroke-linecap="round" />
+          <polygon points="171,18 213,18 213,40 205,46 163,46 163,24" class="shape-fill shape-ink" stroke-width="2.5"
+            stroke-linejoin="round" />
+        </svg>
+
+        <p class="kicker">DMN editor</p>
+        <h1>Decision models, native on iPhone, iPad and Mac</h1>
+        <p class="lede">
+          Draw the decision requirements diagram, fill in the decision tables and check the
+          model as you go — then save a standard .dmn file that other DMN tools open as it was,
+          plus your changes.
+        </p>
+        <div class="actions">
+          <!-- Becomes a link to the App Store page once the app is out. -->
+          <span class="button primary">Coming soon on the App Store</span>
+          <a class="button ghost" href="support.html">How it works</a>
+        </div>
+        <p class="requires">For iOS 18, iPadOS 18 and macOS 15 or later</p>
+
+        <img class="devices" src="assets/img/hero-devices.webp" width="1800" height="1112"
+          alt="DMN Master on iPad, MacBook, iPhone and iPhone Duo, showing a decision requirements diagram, a decision table and the model check in the Terracotta theme" />
+      </div>
+    </section>
+
+    <div class="wide">
+      <section class="feature">
+        <div class="feature-text">
+          <p class="label">Decision tables</p>
+          <h2>Edit rules like a spreadsheet</h2>
+          <p>
+            Tap a cell and type. Every cell is a FEEL text field, Return moves down, and the
+            columns resize by dragging their edge.
+          </p>
+          <ul class="inputs">
+            <li>Add, duplicate, move and delete rules, inputs, outputs and annotations</li>
+            <li>Every hit policy, chosen from a grid that explains each one</li>
+            <li>Literal expressions in a monospaced editor, with their result type</li>
+          </ul>
+        </div>
+        <div class="feature-art">
+          <img class="phone" src="assets/img/phone-table.webp" width="640" height="1237" loading="lazy"
+            alt="iPhone showing the Risk category decision table with its Unique hit policy and eight rules" />
+        </div>
+      </section>
+
+      <section class="feature flip">
+        <div class="feature-text">
+          <p class="label">Quick create</p>
+          <h2>Grow the model tap by tap</h2>
+          <p>
+            Select an element and tap “+” beside it: the app offers only what can be connected
+            to it, and the new element arrives connected, placed clear of what is drawn there.
+          </p>
+          <ul class="inputs">
+            <li>Each connection is the requirement the notation allows</li>
+            <li>Or drag an element from the library onto the canvas</li>
+            <li>With a keyboard, select a decision and type <kbd>I</kbd> <kbd>I</kbd> <kbd>K</kbd> to give it two inputs and a knowledge model</li>
+          </ul>
+        </div>
+        <div class="feature-art">
+          <img class="duo" src="assets/img/duo-quickcreate.webp" width="700" height="947" loading="lazy"
+            alt="iPhone Duo showing a selected decision with the quick create buttons beside it" />
+        </div>
+      </section>
+
+      <section class="feature">
+        <div class="feature-text">
+          <p class="label">Made for Mac</p>
+          <h2>Every action is a <kbd>⌘</kbd><kbd>K</kbd> away</h2>
+          <p>
+            One search field for every command, every element type and every decision and
+            table of your model, ranked as you type.
+          </p>
+          <ul class="inputs">
+            <li>Menus, keyboard shortcuts for every tool, printing and a minimap</li>
+            <li>Library, canvas and properties side by side</li>
+            <li>Press Space on a .dmn file in Finder to preview the model with Quick Look</li>
+          </ul>
+        </div>
+        <div class="feature-art">
+          <img class="laptop" src="assets/img/mac-palette.webp" width="1278" height="797" loading="lazy"
+            alt="MacBook showing the command palette over a loan approval model" />
+        </div>
+      </section>
+
+      <section class="feature flip">
+        <div class="feature-text">
+          <p class="label">Model check</p>
+          <h2>Catch modeling mistakes early</h2>
+          <p>
+            The model is checked while you edit, and problems are marked right on the canvas.
+            Tap one in the list to jump straight to it.
+          </p>
+          <ul class="inputs">
+            <li>Broken references, forbidden requirements and requirement cycles</li>
+            <li>Decisions without logic and input data nothing uses</li>
+            <li>Decision tables whose rules do not match their columns</li>
+          </ul>
+        </div>
+        <div class="feature-art">
+          <img class="tablet" src="assets/img/ipad-check.webp" width="860" height="1102" loading="lazy"
+            alt="iPad showing a claim triage model with error and warning badges and the list of problems" />
+        </div>
+      </section>
+
+      <section class="feature">
+        <div class="feature-text">
+          <p class="label">Three themes</p>
+          <h2>Terracotta, Light or Dark</h2>
+          <p>
+            Terracotta takes its colours from the app icon: a terracotta bar and a warm clay
+            canvas. Light is bright paper; Dark is espresso with cream lines.
+          </p>
+          <ul class="inputs">
+            <li>Switch at any time in Settings — it applies instantly</li>
+            <li>Exported images, PDFs and printouts always use the light paper look</li>
+          </ul>
+        </div>
+        <div class="feature-art">
+          <img class="phone" src="assets/img/phone-themes.webp" width="640" height="1237" loading="lazy"
+            alt="iPhone showing the same model split diagonally into the Terracotta, Light and Dark themes" />
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <p class="label">Everything DMN</p>
+          <h2>A real editor, not a viewer</h2>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <svg class="glyph" viewBox="0 0 34 34" aria-hidden="true">
+              <polygon points="9,5 31,5 31,23 25,29 3,29 3,11" class="shape-fill shape-accent" stroke-width="2.4"
+                stroke-linejoin="round" />
+            </svg>
+            <h3>The full notation</h3>
+            <p>Decisions, input data, knowledge models, knowledge sources, decision services,
+              annotations and groups, with every requirement drawn as the specification draws it.</p>
+          </div>
+          <div class="card">
+            <svg class="glyph" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M8 3 H21 L27 9 V31 H8 Z" class="shape-fill shape-ink" stroke-width="2.2"
+                stroke-linejoin="round" />
+              <path d="M21 3 V9 H27" fill="none" class="shape-ink" stroke-width="2.2" stroke-linejoin="round" />
+            </svg>
+            <h3>Your files stay intact</h3>
+            <p>DMN 1.1 to 1.5. Item definitions, imports, other tools' extensions and the text of
+              every expression survive a save untouched.</p>
+          </div>
+          <div class="card">
+            <svg class="glyph" viewBox="0 0 34 34" aria-hidden="true">
+              <rect x="7" y="2" width="20" height="12" rx="1" class="shape-fill shape-ink" stroke-width="2.2" />
+              <path d="M17 24 V18" class="shape-accent" stroke-width="2" />
+              <polygon points="13.5,18.5 17,14.5 20.5,18.5" style="fill: var(--accent)" />
+              <rect x="6" y="24" width="22" height="8" rx="4" class="shape-fill shape-ink" stroke-width="2.2" />
+            </svg>
+            <h3>Files without a layout</h3>
+            <p>A model saved with no diagram opens with a generated layout: inputs below,
+              decisions above, the arrows pointing up.</p>
+          </div>
+          <div class="card">
+            <svg class="glyph" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M4 4 H30 V26 C24 21.5 17 30.5 10 27 C7.5 25.8 5.5 25.8 4 26.6 Z" class="shape-fill shape-ink"
+                stroke-width="2.2" stroke-linejoin="round" />
+              <path d="M9 10 H25 M9 15 H21" class="shape-accent" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <h3>Share and print</h3>
+            <p>Export to PNG and PDF — the PDF holds the diagram and every decision table — print,
+              and view the XML source.</p>
+          </div>
+          <div class="card">
+            <svg class="glyph" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M11 15 V10.5 C11 3.5 23 3.5 23 10.5 V15" fill="none" class="shape-ink" stroke-width="2.4" />
+              <rect x="6" y="15" width="22" height="16" rx="3" class="shape-fill shape-ink" stroke-width="2.2" />
+              <path d="M17 21 V25" class="shape-accent" stroke-width="2.4" stroke-linecap="round" />
+            </svg>
+            <h3>Private and offline</h3>
+            <p>No account, no tracking, no network. Models are ordinary files in storage you
+              already use.</p>
+          </div>
+          <div class="card">
+            <svg class="glyph" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M12 4 H6 V30 H12" fill="none" class="shape-ink" stroke-width="2.2" />
+              <path d="M11 11 H29 M11 17 H26 M11 23 H22" class="shape-accent" stroke-width="2.2"
+                stroke-linecap="round" />
+            </svg>
+            <h3>Seven languages</h3>
+            <p>English, German, French, Ukrainian, Spanish, Japanese and Portuguese, switched
+              without a restart.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <picture>
+          <source srcset="assets/icon-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="assets/icon.png" width="96" height="96" alt="DMN Master app icon" />
+        </picture>
+        <h2>Start with a single decision</h2>
+        <p>One app for iPhone, iPad and Mac.</p>
+        <!-- Becomes a link to the App Store page once the app is out. -->
+        <span class="button solid">Coming soon on the App Store</span>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="mailto:volodymyr.sichka@gmail.com">Contact</a>
+    </nav>
+    <p>© 2026 Volodymyr Sichka</p>
+  </footer>
+</body>
+
+</html>

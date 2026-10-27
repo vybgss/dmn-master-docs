@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>DMN Master — Support</title>
+  <meta name="description" content="Answers to common questions about DMN Master, the DMN decision modeling editor for iPhone, iPad and Mac, and how to get in touch." />
+  <meta name="theme-color" content="#b4471a" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1814" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+
+<body>
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="marketing.html"><img src="assets/icon.png" alt="" /><span>DMN Master</span></a>
+      <nav class="nav" aria-label="Site">
+        <a href="marketing.html">Overview</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy-policy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="dtable">
+      <div class="dtable-name" aria-hidden="true">Support</div>
+      <div class="dtable-body">
+        <div class="dtable-hit" aria-hidden="true">F</div>
+        <div class="dtable-main">
+          <picture>
+            <source srcset="assets/icon-dark.png" media="(prefers-color-scheme: dark)" />
+            <img src="assets/icon.png" width="76" height="76" alt="DMN Master app icon" />
+          </picture>
+          <div>
+            <h1>DMN Master Support</h1>
+            <p>A native DMN decision modeling editor for iPhone, iPad and Mac. Answers to common
+              questions are below; if yours is not here, <a href="#contact">write to us</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <ul class="toc">
+        <li><a href="#what">What is DMN Master?</a></li>
+        <li><a href="#start">How do I start a model?</a></li>
+        <li><a href="#add">How do I add and connect elements?</a></li>
+        <li><a href="#tables">How do I edit a decision table?</a></li>
+        <li><a href="#hit-policy">What do the hit policy letters mean?</a></li>
+        <li><a href="#properties">Where do I change names and types?</a></li>
+        <li><a href="#select">How do I select several elements?</a></li>
+        <li><a href="#keyboard">Keyboard shortcuts and the command palette</a></li>
+        <li><a href="#check">What does the model check look for?</a></li>
+        <li><a href="#export">Export, print and the XML source</a></li>
+        <li><a href="#files">Where are my files stored?</a></li>
+        <li><a href="#layout">A file opens with a generated layout</a></li>
+        <li><a href="#other-tools">Will my file still open in other DMN tools?</a></li>
+        <li><a href="#execute">Can the app run my decisions?</a></li>
+        <li><a href="#settings">Settings and themes</a></li>
+        <li><a href="#requirements">System requirements</a></li>
+        <li><a href="#contact">Contact and feedback</a></li>
+      </ul>
+    </div>
+
+    <h2 class="label">Getting started</h2>
+
+    <div class="card" id="what">
+      <h3>What is DMN Master?</h3>
+      <p>
+        An editor for decision models in DMN — Decision Model and Notation, the standard
+        published by the Object Management Group. You draw the decision requirements diagram,
+        describe each decision's logic in a decision table or an expression, and the app checks
+        the model as you go. Everything is saved as a standard <strong>.dmn</strong> file —
+        plain XML that other DMN tools can open. The app is written natively for Apple
+        platforms: there is no web view inside it, and it needs no account and no internet
+        connection.
+      </p>
+    </div>
+
+    <div class="card" id="start">
+      <h3>How do I start a model?</h3>
+      <p>
+        Tap <strong>New decision model</strong> on the start screen on iPhone and iPad, or
+        choose File → New on Mac. A new model holds one decision with an empty decision table.
+        Select the decision and tap the “+” beside it to add the input data, sub-decisions or
+        knowledge models it needs, already connected. To open an existing file, choose it in
+        the document browser, in Files, or in Finder.
+      </p>
+    </div>
+
+    <div class="card" id="add">
+      <h3>How do I add and connect elements?</h3>
+      <p>
+        The <strong>Library</strong> holds every element of a decision requirements diagram,
+        drawn in real DMN notation, with a search field on top. On Mac and iPad it is the panel
+        on the left; on iPhone, open it with the grid button at the end of the tool dock at the
+        bottom of the screen.
+      </p>
+      <ul>
+        <li><strong>Tap an element</strong> in the library. If exactly one element is selected,
+          the new one is placed beside it and connected to it with the requirement the notation
+          allows — input data below a decision gets an information requirement, a knowledge
+          model a knowledge requirement, a knowledge source an authority requirement.</li>
+        <li><strong>Drag an element</strong> from the library or the dock onto the canvas to put
+          it exactly where you want. It is not connected to anything.</li>
+        <li><strong>Use the “+”</strong> beside a selected element: it offers only what can be
+          connected to that element, and the new one lands where nothing else is drawn.</li>
+      </ul>
+      <p>
+        To connect two elements yourself, choose the <strong>Connect</strong> tool in the dock and
+        drag from what is required to what requires it — from input data up to the decision
+        that uses it. The app picks the right kind of requirement, and refuses connections the
+        notation does not allow. A line to a text annotation becomes an association.
+      </p>
+    </div>
+
+    <h2 class="label">Decision logic</h2>
+
+    <div class="card" id="tables">
+      <h3>How do I edit a decision table?</h3>
+      <p>
+        Tap the small table icon in the top-left corner of a decision, or select the decision
+        and press <kbd>L</kbd>. The logic opens in place of the canvas; <strong>Diagram</strong>
+        (or <kbd>⌘</kbd><kbd>↑</kbd>) takes you back. A decision without logic offers
+        <strong>Add decision table</strong> or <strong>Add literal expression</strong>.
+      </p>
+      <ul>
+        <li><strong>Cells</strong> are edited as in a spreadsheet: tap one and type. Every cell is
+          a FEEL text field, Return moves down, and quotes stay straight so FEEL keeps
+          working.</li>
+        <li><strong>The “+”</strong> in the table's header adds a rule, an input or an output.</li>
+        <li><strong>A rule number or a column header</strong> has a menu (right-click on Mac,
+          touch and hold on iPhone and iPad) to insert, move or delete it; rules can also be
+          duplicated.</li>
+        <li><strong>Selecting a column</strong> shows its label, expression, type, allowed values
+          and default output in Properties.</li>
+        <li><strong>Columns</strong> resize by dragging their edge.</li>
+      </ul>
+      <p>
+        Literal expressions are edited in a monospaced editor together with their result type.
+        Contexts, invocations, functions, relations, lists and the DMN 1.4 conditional,
+        iteration and filter expressions are shown as boxed expressions, read-only.
+      </p>
+    </div>
+
+    <div class="card" id="hit-policy">
+      <h3>What do the hit policy letters mean?</h3>
+      <p>
+        The letter in the top-left corner of a table is its hit policy: what happens when
+        several rules match. Tap it to choose another; Properties shows the same choice as a
+        grid that explains each one.
+      </p>
+      <ul>
+        <li><strong>U — Unique:</strong> rules must not overlap; exactly one may match.</li>
+        <li><strong>A — Any:</strong> rules may overlap, but every match must give the same
+          output.</li>
+        <li><strong>P — Priority:</strong> the match whose output comes first in the allowed
+          values wins.</li>
+        <li><strong>F — First:</strong> the first match in table order wins.</li>
+        <li><strong>R — Rule order:</strong> all matches, as a list in table order.</li>
+        <li><strong>O — Output order:</strong> all matches, sorted by the order of the allowed
+          output values.</li>
+        <li><strong>C — Collect:</strong> all matches as a list, or combined by an aggregation:
+          sum (C+), count (C#), minimum (C&lt;) or maximum (C&gt;).</li>
+      </ul>
+    </div>
+
+    <h2 class="label">Editing</h2>
+
+    <div class="card" id="properties">
+      <h3>Where do I change names, types and descriptions?</h3>
+      <p>
+        In <strong>Properties</strong>. On Mac and iPad it is the panel on the right; on iPhone,
+        select an element and tap the properties button in the small bar above it. There you
+        can edit an element's name and description, a decision's question and allowed answers,
+        its variable type — FEEL's built-in types or the model's own item definitions — and a
+        knowledge source's type. With nothing selected, Properties shows the model's name and
+        namespace and the list of problems.
+      </p>
+      <p>
+        To rename, double-click or double-tap the element, or press Return. Renaming an element
+        renames its variable too, as the specification requires.
+      </p>
+    </div>
+
+    <div class="card" id="select">
+      <h3>How do I select several elements?</h3>
+      <p>
+        On Mac, Shift-click or Cmd-click to add to the selection, or drag from empty space to
+        draw a selection rectangle; <kbd>⌘</kbd><kbd>A</kbd> selects everything. On iPhone and
+        iPad, <strong>press and hold</strong> an element to add it to the selection. With
+        several elements selected, Align and Distribute are in the “…” menu (and in the Arrange
+        menu on Mac), next to <strong>Arrange automatically</strong>, which lays out the whole
+        model.
+      </p>
+    </div>
+
+    <div class="card" id="keyboard">
+      <h3>Are there keyboard shortcuts?</h3>
+      <p>
+        Yes, on Mac and on iPad with a keyboard. <kbd>⌘</kbd><kbd>K</kbd> opens the
+        <strong>command palette</strong>: one search field for every action, every element type
+        to add and every element and decision table of the model to jump to.
+        <kbd>⌘</kbd><kbd>F</kbd> finds elements by name.
+      </p>
+      <p>
+        Single letters pick tools (<kbd>V</kbd> select, <kbd>H</kbd> pan, <kbd>C</kbd> connect)
+        and add elements (<kbd>D</kbd> decision, <kbd>I</kbd> input data, <kbd>K</kbd> knowledge
+        model, <kbd>S</kbd> knowledge source, <kbd>A</kbd> annotation). With one element
+        selected, the new one is placed below it as its requirement and connected — select a
+        decision and type <kbd>I</kbd> <kbd>I</kbd> <kbd>K</kbd> to give it two inputs and a
+        knowledge model. <kbd>L</kbd> opens the logic and <kbd>F</kbd> fits the model to the
+        window. The full list is on the Keyboard page in Settings.
+      </p>
+    </div>
+
+    <div class="card" id="undo">
+      <h3>Where are undo and redo?</h3>
+      <p>
+        Undo is a button in the toolbar on every device, and redo is beside it or in the
+        “…” menu, depending on how much room the toolbar has. With a keyboard,
+        <kbd>⌘</kbd><kbd>Z</kbd> and <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Z</kbd> work as usual. Every
+        edit can be undone, and typing in a field is one undo step, not one per letter.
+      </p>
+    </div>
+
+    <div class="card" id="check">
+      <h3>What does the model check look for?</h3>
+      <p>
+        The model is checked as you edit: references to elements that do not exist,
+        requirements the notation does not allow, cycles of information requirements, elements
+        without a name, variables whose name differs from their element, decisions without
+        logic, input data nothing uses and duplicate IDs. In decision tables it looks for
+        tables with no rules, rules whose entries do not match the columns, outputs without
+        names and aggregation with several outputs.
+      </p>
+      <p>
+        Errors get a red badge on the canvas and warnings an amber one. The badge at the top of
+        the canvas counts them; tap it for the list, and tap an entry to jump to the element.
+        Badges never appear in exports or printouts. To hide them, turn off <strong>Mark
+        problems on the canvas</strong> in Settings → Editing.
+      </p>
+    </div>
+
+    <h2 class="label">Files and sharing</h2>
+
+    <div class="card" id="export">
+      <h3>How do I export, print or see the XML?</h3>
+      <p>
+        On Mac, click the <strong>Export</strong> button (the square with an arrow) in the
+        toolbar; on iPhone and iPad, open <strong>Export</strong> in the <strong>“…”</strong>
+        menu. Both offer <strong>Export as PNG</strong>, <strong>Export as PDF</strong>,
+        <strong>Print</strong> and <strong>Show XML</strong>, which shows the file exactly as it
+        will be saved, with syntax highlighting. On Mac, Print is also in the File menu
+        (<kbd>⌘</kbd><kbd>P</kbd>).
+      </p>
+      <p>
+        The PDF holds the whole model: the diagram on the first page and every decision table
+        and expression on its own page after it. From an open decision table, export and print
+        take just that table. Exports and printouts always use the light paper look, whichever
+        theme you use on screen.
+      </p>
+    </div>
+
+    <div class="card" id="files">
+      <h3>Where are my files stored?</h3>
+      <p>
+        Wherever you save them. DMN Master is a standard document-based app and uses the
+        system file browser: Files on iPhone and iPad, Finder on Mac, including iCloud Drive
+        and any other provider you have connected. On iPhone and iPad, the app's own folder is
+        under <strong>Browse → On My iPhone (or iPad) → DMN Master</strong>. Plain .xml files
+        that hold a DMN model open too.
+      </p>
+      <p>
+        On Mac, press Space on a .dmn file in Finder to preview it with Quick Look: the diagram
+        and then every decision table, page by page.
+      </p>
+    </div>
+
+    <div class="card" id="layout">
+      <h3>A file opened with a generated layout. Why?</h3>
+      <p>
+        A DMN file can describe decisions without saying where anything is drawn — the layout
+        lives in a separate <strong>DMNDI</strong> section, which DMN 1.1 did not have at all
+        and which engines and scripts often leave out. DMN Master opens such a file with a
+        layout of its own: input data at the bottom, each decision above what it requires, and
+        the arrows pointing up, as in the specification. A note on the canvas says the layout
+        was generated; saving writes it into the file.
+      </p>
+    </div>
+
+    <div class="card" id="other-tools">
+      <h3>Will my file still open in other DMN tools?</h3>
+      <p>
+        Yes. The app reads DMN 1.1 to 1.5 and saves each file in the version it was written in;
+        new models are DMN 1.3, the version every common engine reads. The file is kept as a
+        complete XML document and edited in place, never rewritten from scratch: item
+        definitions, imports, extensions written by other DMN tools and the exact text of
+        every expression survive a save untouched.
+      </p>
+    </div>
+
+    <div class="card" id="execute">
+      <h3>Can the app run my decisions?</h3>
+      <p>
+        No. DMN Master edits and checks decision models; it does not evaluate FEEL or execute
+        decisions. Run the saved .dmn file in the decision engine you already use.
+      </p>
+    </div>
+
+    <h2 class="label">Settings</h2>
+
+    <div class="card" id="settings">
+      <h3>Where is Settings, and what is in it?</h3>
+      <p>
+        In the <strong>“…”</strong> toolbar menu on every device; on Mac you can also press
+        <kbd>⌘</kbd><kbd>,</kbd> or choose DMN Master → Settings. It has five pages:
+      </p>
+      <ul>
+        <li><strong>General</strong> — appearance and interface language</li>
+        <li><strong>Canvas</strong> — dots or lines in the background, the minimap</li>
+        <li><strong>Editing</strong> — the buttons beside the selection, the model check</li>
+        <li><strong>Keyboard</strong> — every shortcut</li>
+        <li><strong>About</strong> — version, build and a link to the DMN specification</li>
+      </ul>
+    </div>
+
+    <div class="card" id="themes">
+      <h3>How do I change the theme?</h3>
+      <p>
+        In Settings → General → <strong>Appearance</strong>. <strong>Terracotta</strong>, the
+        default, uses the colours of the app icon; <strong>Light</strong> is the bright paper
+        look; <strong>Dark</strong> is espresso with cream lines. The change applies at once.
+      </p>
+    </div>
+
+    <div class="card" id="language">
+      <h3>Can I change the language?</h3>
+      <p>
+        Yes. The app is available in English, German, French, Ukrainian, Spanish, Japanese and
+        Portuguese. By default it follows your device language, falling back to English; you
+        can change it in Settings → General, and it applies immediately without a restart.
+      </p>
+    </div>
+
+    <h2 class="label">About the app</h2>
+
+    <div class="card" id="offline">
+      <h3>Does it need an internet connection?</h3>
+      <p>
+        No. The app works entirely offline, makes no network requests and collects no data.
+        See the <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
+    </div>
+
+    <div class="card" id="requirements">
+      <h3>System requirements</h3>
+      <p>
+        iPhone with iOS 18 or later, iPad with iPadOS 18 or later, or a Mac with macOS 15 or
+        later.
+      </p>
+    </div>
+
+    <div class="card short" id="contact">
+      <h3>Contact and feedback</h3>
+      <p>
+        Didn't find your answer, found a file that renders wrongly, or missing a DMN feature?
+        Write to us — we read everything, and a sample .dmn file attached to your message
+        helps enormously.
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:volodymyr.sichka@gmail.com?subject=DMN%20Master%20support">volodymyr.sichka@gmail.com</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <nav aria-label="Footer">
+      <a href="marketing.html">Overview</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <p class="motto">Every decision model starts with a single decision.</p>
+    <p>© 2026 Volodymyr Sichka</p>
+  </footer>
+</body>
+
+</html>
